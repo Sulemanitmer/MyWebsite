@@ -14,13 +14,13 @@ header
     top: 0;
     left: 0;
     padding:0 100px;
-    background-color: #262626;
+    background-color: #f9cc41;
     width: 100%;
     box-sizing: border-box;
 }
 header .logo
 {
-    color: #fff;
+    color: black;
     height: 50px;
     line-height: 50px;
     font-size: 24px;
@@ -46,19 +46,22 @@ header nav ul li a
     height: 50px;
     line-height: 50px;
     padding: 0 20px;
-    color: #fff;
+    color: #262533;
     text-decoration:none;
     display: block;
+    font-weight: bold;
+   text-transform: capitalize;
 }
 header nav ul li a:hover,
 header nav ul li a.active
 {
-    color:#fff;
-    background-color: #2196f3;
+    transition: 0.5s;
+    color:#f9cc41;
+    background-color: #262533 ;
 }
 .menu-toggle
 {
-    color: #fff;
+    color: black;
     float: left;
     line-height: 50px;
     font-size: 24px;
@@ -82,8 +85,8 @@ header nav ul li a.active
     {
         position: absolute;
         width: 100%;
-        height: calc(100vh - 50px);
-        background: #333;
+        height: calc(150vh - 50px);
+        background: #262533;
         top: 50px;
         left: -100%;
         transition: 1s;
@@ -100,23 +103,31 @@ header nav ul li a.active
     header nav ul li a
     {
         border-bottom: 1px solid rgba(0,0,0,.2);
+        color: #f9cc41;
+    }
+    header nav ul li a:hover,
+    header nav ul li a.active
+    {
+        transition: 0.5s;
+        color:#262533;
+        background-color: #f9cc41;
     }
 }
 
 /* body style */
 .profilePic{
-    background: #f9cc41 ;
-    background-image: url("/Images/newSolo.png");
+    background: #262533 ;
+    background-image: url("/Images/newSoloLogoPicFinal.png");
     background-repeat: no-repeat;
-    background-size: 430px;
+    background-size: 500px;
     background-position: center;
-    background-position-y: 60px;
-    height: 650px;
+    background-position-y: 57.5px;
+    height: 600px;
     text-indent: -9999px;
 }
-.profileBio{
+.profileBio div{
     background: #262533 ;
-   
+    background: red;  
     height: auto;
     margin-left: 50px;
     margin-right: 50px;
@@ -126,16 +137,18 @@ header nav ul li a.active
 .profileBio p{
     text-indent: 40px;
     color: #8f8f8f;
-    font-family: 'Oswald', sans-serif;
+    
 }
 .profileBio h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
     text-align: center;
     color: white;
 }
 footer{
     text-align: center;
     height: 33px;
-    background: rgba(0,0,0,0.75);
+    background: #0f102a;
     margin: 0;
     padding: 0;
 }
