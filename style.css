@@ -1,3 +1,5 @@
+
+/* Main style*/
 body
 {
     font-family: 'Roboto', sans-serif;
@@ -7,7 +9,7 @@ body
     padding: 0;
 }
 
-/* desktop style*/
+/* main modification of header*/
 header
 {
     position: absolute;
@@ -18,15 +20,23 @@ header
     width: 100%;
     box-sizing: border-box;
 }
+
+/* header logo modification*/
 header .logo
 {
-    color: black;
-    height: 50px;
-    line-height: 50px;
-    font-size: 24px;
+    background-image: url("/Images/logos/MyProLogo.png");
+    background-size: 120px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-indent: -9999px;
+    background-position-x: -20px;
+    background-position-y: -15px;
+    height: 47.5px;
+    width: 75px;
     float: right;
-    font-weight: bold;
 }
+
+/* header navigation modification*/
 header nav
 {
     float: left;
@@ -52,13 +62,6 @@ header nav ul li a
     font-weight: bold;
    text-transform: capitalize;
 }
-header nav ul li a:hover,
-header nav ul li a.active
-{
-    transition: 0.5s;
-    color:#f9cc41;
-    background-color: #262533 ;
-}
 .menu-toggle
 {
     color: black;
@@ -69,8 +72,152 @@ header nav ul li a.active
     display: none;
 }
 
-/* mobile style*/
-@media (max-width: 1120px)
+/* Profile style */
+.profilePic{
+    background: #262533 ;
+    background-image: url("/Images/newSoloLogoPicFinal.png");
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: center;
+    background-position-y: 85px;
+    height: 600px;
+    text-indent: -9999px;
+}
+
+/* Bio style */
+.profileBio div
+{
+    background: #262533 ; 
+    height: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.profileBio p
+{
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #8f8f8f;
+}
+.profileBio h1
+{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 2.625rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+.profileBio .pSpace
+{
+    opacity: 0%;
+}
+.profileBio h1 br
+{ 
+        display: block; 
+        margin-bottom: 0.5em; 
+} 
+.profileBio .pOne br
+{ 
+        display: block;
+        margin-bottom: -1em; 
+}
+
+/* footer style */
+footer
+{
+    text-align: center;
+    height: 33px;
+    background: #0f102a;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+footer li
+{
+    display: inline-block;
+    margin-right: 40px;
+}
+footer .gitlogo a
+{
+    background-image: url("/Images/logos/GithubWorkWhite.png");
+    background-size: 90px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-indent: -9999px;
+    background-position-y: 5px;
+    background-position-x: -6.5px;
+    height: 33px;
+    width: 75px;
+}
+footer .linklogo a
+{
+    background-image: url("/Images/logos/LinkedinWhite.png");
+    background-size: 90px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-indent: -9999px;
+    background-position-x: -6.6px;
+    background-position-y: 5px;
+    height: 33px;
+    width: 75px;
+}
+
+/* ------------------------------------------> 
+   ------------------------------------------> 
+   hovering style 
+   ------------------------------------------> 
+   ------------------------------------------> */
+
+/* navigation hovering style */
+header nav ul li a:hover,
+header nav ul li a.active
+{
+    transition: 0.5s;
+    color:#f9cc41;
+    background-color: #262533 ;
+}
+
+/* Bio hovering style */
+.profileBio:hover 
+{
+    color:#262533;
+    background-color: #f9cc41;
+}
+.profileBio:hover .box 
+{
+    color:#262533;
+    background-color: #f9cc41;
+}
+.profileBio:hover .box .head 
+{
+    transition: 0.25s;
+    color:#262533;
+    background-color: #f9cc41;
+}
+.profileBio:hover .box .pOne 
+{
+    transition: 0.35s;
+    color:#262533;
+    background-color: #f9cc41;
+}
+.profileBio:hover .box .pTwo
+{
+    transition: 0.5s;
+    color:#262533;
+    background-color: #f9cc41;
+}
+
+/* ------------------------------------------> 
+   ------------------------------------------> 
+   Styles based on screen 
+   ------------------------------------------> 
+   ------------------------------------------> */
+
+/* Browser style*/
+@media screen and (max-width: 1120px)
 {
     header
     {
@@ -114,102 +261,30 @@ header nav ul li a.active
     }
 }
 
-/* body style */
-.profilePic{
-    background: #262533 ;
-    background-image: url("/Images/newSoloLogoPicFinal.png");
-    background-repeat: no-repeat;
-    background-size: 500px;
-    background-position: center;
-    background-position-y: 57.5px;
-    height: 600px;
-    text-indent: -9999px;
-}
-.profileBio div{
-    background: #262533 ; 
-    height: auto;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-.profileBio p{
-    font-size: 0.875rem;
-    font-weight: 300;
-    text-indent: 40px;
-    color: #8f8f8f;
-}
-.profileBio h1{
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    font-size: 2.625rem;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-}
-
-.profileBio:hover 
+/*iphone 6 plus screen */
+@media screen and (max-width: 420px)
 {
-    transition: 0.5s;
-    color:#262533;
-    background-color: #f9cc41;
+    .profilePic{
+        background-size: 375px;
+        height: 525px;
+        background-position-y: 102.5px;
+    }
 }
-.profileBio:hover .box 
+/*iphone 6 screen */
+@media screen and (max-width: 375px)
 {
-    transition: 0.5s;
-    color:#262533;
-    background-color: #f9cc41;
+    .profilePic{
+        background-size: 350px;
+        height: 500px;
+        background-position-y: 102.5px;
+    }
 }
-
-.profileBio:hover .box .head 
+/*S6 screen */
+@media screen and (max-width: 365px)
 {
-    transition: 0.5s;
-    color:#262533;
-    background-color: #f9cc41;
-}
-.profileBio:hover .box .pOne 
-{
-    transition: 0.5s;
-    color:#262533;
-    background-color: #f9cc41;
-}
-.profileBio:hover .box .pTwo
-{
-    transition: 0.5s;
-    color:#262533;
-    background-color: #f9cc41;
-}
-footer{
-    text-align: center;
-    height: 33px;
-    background: #0f102a;
-    margin: 0;
-    padding: 0;
-}
-footer li{
-    display: inline-block;
-    margin-right: 40px;
-}
-footer .gitlogo a{
-    background-image: url("/Images/logos/GithubWorkWhite.png");
-    background-size: 90px;
-    background-repeat: no-repeat;
-    display: inline-block;
-    text-indent: -9999px;
-    background-position-y: 5px;
-    background-position-x: -6.5px;
-    height: 33px;
-    width: 75px;
-}
-
-footer .linklogo a{
-    background-image: url("/Images/logos/LinkedinWhite.png");
-    background-size: 90px;
-    background-repeat: no-repeat;
-    display: inline-block;
-    text-indent: -9999px;
-    background-position-x: -6.6px;
-    background-position-y: 5px;
-    height: 33px;
-    width: 75px;
+    .profilePic{
+        background-size: 325px;
+        height: 475px;
+        background-position-y: 102.5px;
+    }
 }
