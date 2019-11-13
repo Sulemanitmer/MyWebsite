@@ -126,8 +126,7 @@ header nav ul li a.active
     text-indent: -9999px;
 }
 .profileBio div{
-    background: #262533 ;
-    background: red;  
+    background: #262533 ; 
     height: auto;
     margin-left: 50px;
     margin-right: 50px;
@@ -135,15 +134,50 @@ header nav ul li a.active
     margin-bottom: 0px;
 }
 .profileBio p{
+    font-size: 0.875rem;
+    font-weight: 300;
     text-indent: 40px;
     color: #8f8f8f;
-    
 }
 .profileBio h1{
     font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 2.625rem;
     font-weight: bold;
     text-align: center;
     color: white;
+}
+
+.profileBio:hover 
+{
+    transition: 0.5s;
+    color:#262533;
+    background-color: #f9cc41;
+}
+.profileBio:hover .box 
+{
+    transition: 0.5s;
+    color:#262533;
+    background-color: #f9cc41;
+}
+
+.profileBio:hover .box .head 
+{
+    transition: 0.5s;
+    color:#262533;
+    background-color: #f9cc41;
+}
+.profileBio:hover .box .pOne 
+{
+    transition: 0.5s;
+    color:#262533;
+    background-color: #f9cc41;
+}
+.profileBio:hover .box .pTwo
+{
+    transition: 0.5s;
+    color:#262533;
+    background-color: #f9cc41;
 }
 footer{
     text-align: center;
