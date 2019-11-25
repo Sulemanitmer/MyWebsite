@@ -27,7 +27,6 @@ header .logo
     background-image: url("/Images/logos/MyProLogo.png");
     background-size: 120px;
     background-repeat: no-repeat;
-    display: inline-block;
     text-indent: -9999px;
     background-position-x: -20px;
     background-position-y: -15px;
@@ -73,7 +72,8 @@ header nav ul li a
 }
 
 /* Profile style */
-.profilePic{
+.profilePic
+{
     background: #262533 ;
     background-image: url("/Images/newSoloLogoPicFinal.png");
     background-repeat: no-repeat;
@@ -97,8 +97,9 @@ header nav ul li a
 .profileBio p
 {
     font-size: 0.875rem;
-    font-weight: 300;
+    font-weight: 400;
     color: #8f8f8f;
+    text-align: center;
 }
 .profileBio h1
 {
@@ -165,6 +166,32 @@ footer .linklogo a
     width: 75px;
 }
 
+.resumebox
+{
+    
+    margin-top: 50px;
+    height: 525px;
+    width: 100%;
+}
+.resumebox div
+{
+    position: relative;
+    top: 150px;
+    text-align: center;
+}
+.fas
+{
+    color:#f9cc41;
+    font-size: 150px;
+}
+.resumebox div a
+{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 2.625rem;
+    text-decoration:none;
+    color:white;
+}
 /* ------------------------------------------> 
    ------------------------------------------> 
    hovering style 
@@ -269,6 +296,31 @@ header nav ul li a.active
         height: 525px;
         background-position-y: 102.5px;
     }
+    .resumebox
+    {
+        
+        margin-top: 50px;
+        height: 620px;
+        width: 100%;
+    }
+    .resumebox div
+    {
+        position: relative;
+        top: 225px;
+        text-align: center;
+    }
+    .fas
+    {
+        font-size: 130px;
+    }
+    .resumebox div a
+    {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 500;
+        font-size: 1.625rem;
+        text-decoration:none;
+        color:white;
+    }
 }
 /*iphone 6 screen */
 @media screen and (max-width: 375px)
@@ -278,13 +330,37 @@ header nav ul li a.active
         height: 500px;
         background-position-y: 102.5px;
     }
+    .resumebox
+    {
+        margin-top: 50px;
+        height: 550px;
+        width: 100%;
+    }
+    .resumebox div
+    {
+        position: relative;
+        top: 175px;
+        text-align: center;
+    }
 }
 /*S6 screen */
 @media screen and (max-width: 365px)
 {
     .profilePic{
         background-size: 325px;
-        height: 475px;
-        background-position-y: 102.5px;
+        height: 575px;
+        background-position-y: 175px;
+    }
+    .resumebox
+    {
+        margin-top: 50px;
+        height: 625px;
+        width: 100%;
+    }
+    .resumebox div
+    {
+        position: relative;
+        top: 225px;
+        text-align: center;
     }
 }
