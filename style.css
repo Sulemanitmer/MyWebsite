@@ -1,0 +1,168 @@
+body
+{
+    font-family: 'Roboto', sans-serif;
+    background: #262533;
+    color: #8f8f8f;
+    margin: 0;
+    padding: 0;
+}
+
+/* desktop style*/
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding:0 100px;
+    background-color: #262626;
+    width: 100%;
+    box-sizing: border-box;
+}
+header .logo
+{
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    float: right;
+    font-weight: bold;
+}
+header nav
+{
+    float: left;
+}
+header nav ul
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+header nav ul li
+{
+    list-style: none;
+}
+header nav ul li a
+{
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: #fff;
+    text-decoration:none;
+    display: block;
+}
+header nav ul li a:hover,
+header nav ul li a.active
+{
+    color:#fff;
+    background-color: #2196f3;
+}
+.menu-toggle
+{
+    color: #fff;
+    float: left;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+/* mobile style*/
+@media (max-width: 1120px)
+{
+    header
+    {
+        padding:0 20px;
+    }
+   
+    .menu-toggle
+    {
+        display: block;
+    }
+    header nav
+    {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #333;
+        top: 50px;
+        left: -100%;
+        transition: 1s;
+    }
+    header nav.active
+    {
+        left: 0;
+    }
+    header nav ul
+    {
+        display: block;
+        text-align: center;
+    }
+    header nav ul li a
+    {
+        border-bottom: 1px solid rgba(0,0,0,.2);
+    }
+}
+
+/* body style */
+.profilePic{
+    background: #f9cc41 ;
+    background-image: url("/Images/newSolo.png");
+    background-repeat: no-repeat;
+    background-size: 430px;
+    background-position: center;
+    background-position-y: 60px;
+    height: 650px;
+    text-indent: -9999px;
+}
+.profileBio{
+    background: #262533 ;
+   
+    height: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.profileBio p{
+    text-indent: 40px;
+    color: #8f8f8f;
+    font-family: 'Oswald', sans-serif;
+}
+.profileBio h1{
+    text-align: center;
+    color: white;
+}
+footer{
+    text-align: center;
+    height: 33px;
+    background: rgba(0,0,0,0.75);
+    margin: 0;
+    padding: 0;
+}
+footer li{
+    display: inline-block;
+    margin-right: 40px;
+}
+footer .gitlogo a{
+    background-image: url("/Images/logos/GithubWorkWhite.png");
+    background-size: 90px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-indent: -9999px;
+    background-position-y: 5px;
+    background-position-x: -6.5px;
+    height: 33px;
+    width: 75px;
+}
+
+footer .linklogo a{
+    background-image: url("/Images/logos/LinkedinWhite.png");
+    background-size: 90px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-indent: -9999px;
+    background-position-x: -6.6px;
+    background-position-y: 5px;
+    height: 33px;
+    width: 75px;
+}
