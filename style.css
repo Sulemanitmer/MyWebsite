@@ -1,16 +1,196 @@
+@define-mixin atSmall {
+    @media (min-width: 576px) {
+      @mixin-content; } }
+  @define-mixin atMedium {
+    @media (min-width: 768px) {
+      @mixin-content; } }
+  @define-mixin atLarge {
+    @media (min-width: 992px) {
+      @mixin-content; } }
+  @define-mixin atExtraLarge {
+    @media (min-width: 1200px) {
+      @mixin-content; } }
+
 body
 {
     font-family: 'Roboto', sans-serif;
-    background: #262533;
     color: #8f8f8f;
+    background: #262533;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: left;
     margin: 0;
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+}
+.section{
+    display: block;
+}
+
+*, ::after, ::before{
+    box-sizing: border-box;
+}
+
+.section-margin {
+    margin-top: 60px;
+    margin-bottom: 60px; 
+}
+@media (min-width: 992px) {
+    .section-margin {
+    margin-top: 115px;
+    margin-bottom: 115px; 
+    } 
+}
+
+/* profile starter */
+
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.align-items-center{
+    align-items: center !important;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-5, .col-md7{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* pic starter */
+
+.about__img{
+    position: relative;
+}
+.text-center{
+    text-align: center !important;
+}
+.mb-5{
+    margin-bottom: 3rem !important;
+}
+
+/* sign starter */
+
+.about__img {
+    position: relative; 
+}
+.about__img__date{
+    display: inline-block;
+    position: absolute;
+    bottom: 11%;
+    left: 13%;
+    background: #f9cc41;
+    color: #000000;
+    padding: .9rem 1.2rem 1rem 1.2rem;
+    transition: .4s;
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+.img{
+    vertical-align: middle;
+    border-style: none;
+}
+
+.about__img__date h3{
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: .2rem;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+}
+.about__img__date p{
+    margin-bottom: 0;
+    font-style: 0.75rem;
+}
+.about__img__date:hover {
+    color: #000000;
+    opacity: .96; 
+}
+
+
+.section-intro__title {
+  font-size: 0.75rem;
+  color: #f9cc41;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  font-family: inherit;
+  font-weight: 500;
+  margin-top: 0;
+}
+.section-intro__title.left-border {
+    padding-left: 35px;
+    position: relative; 
+}
+.section-intro__title.left-border:after {
+    content: "";
+    display: block;
+    min-width: 20px;
+    height: 2px;
+    background: #f9cc41;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0; 
+}
+.section-intro__subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 2.625rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    line-height: 1.5em; 
+    margin-top: 0;
+}
+.section-intro__subtitle.bottom-border {
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+    position: relative; 
+}
+.section-intro__subtitle.bottom-border:after {
+    content: "";
+    display: block;
+    height: 2px;
+    min-width: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #f9cc41; 
+}
+.section-intro__subtitle.small {
+    font-size: 2rem; 
+}
+
+
+
+
+
 /* desktop style*/
 header
 {
-    position: absolute;
+    position: fixed;
+    z-index: 2;
     top: 0;
     left: 0;
     padding:0 100px;
@@ -60,6 +240,7 @@ header nav ul li a.active
 {
     color: #fff;
     float: left;
+    position: relative;
     line-height: 50px;
     font-size: 24px;
     cursor: pointer;
@@ -80,7 +261,7 @@ header nav ul li a.active
     }
     header nav
     {
-        position: absolute;
+        position: fixed;
         width: 100%;
         height: calc(100vh - 50px);
         background: #333;
@@ -104,33 +285,53 @@ header nav ul li a.active
 }
 
 /* body style */
-.profilePic{
-    background: #f9cc41 ;
-    background-image: url("/Images/newSolo.png");
-    background-repeat: no-repeat;
-    background-size: 430px;
-    background-position: center;
-    background-position-y: 60px;
-    height: 650px;
-    text-indent: -9999px;
+.profile{
+    align-items: center !important;
 }
+.profilePic{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
 .profileBio{
-    background: #262533 ;
-   
-    height: auto;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 .profileBio p{
+    font-family: 'Roboto', sans-serif;
     text-indent: 40px;
     color: #8f8f8f;
-    font-family: 'Oswald', sans-serif;
+   
 }
-.profileBio h1{
-    text-align: center;
+.profileBio-Intro_Subtitle{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 2.625rem;
+    margin-bottom: 1.5rem;
     color: white;
+    line-height: 1.5rem;
+    margin-top: 0;
+    box-sizing: border-box;
+    text-align: left;
+}
+.profileBio-Intro_Title{
+    
+    font-size:0.75rem;
+    color: #f9cc41;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 1.5em;
+    box-sizing: border-box;
+    margin-top: 0;
+    font-family: inherit;
+ 
 }
 footer{
     text-align: center;
