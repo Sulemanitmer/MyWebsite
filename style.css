@@ -27,10 +27,24 @@ body
 a{
     text-decoration: none;
 }
+
+h1, h2, h3, h4, h5, h6{
+    line-height: 1.5em;
+    margin-top: 0;
+}
+
+.h1,.h2,.h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    font-family: inherit;
+    font-weight: 500;
+}
 .section{
     display: block;
 }
 
+p{
+    margin-bottom: 20px;
+    margin-top: 0;
+}
 *, ::after, ::before{
     box-sizing: border-box;
 }
@@ -48,6 +62,7 @@ a{
 
 /* profile starter */
 
+/* home page container */
 .container{
     width: 100%;
     padding-right: 15px;
@@ -67,7 +82,7 @@ a{
     margin-left: -15px;
 }
 
-.col-md-5, .col-md7{
+.col-md-5, .col-md-7{
     position: relative;
     width: 100%;
     min-height: 1px;
@@ -84,7 +99,7 @@ a{
     text-align: center !important;
 }
 .mb-5{
-    margin-bottom: 3rem !important;
+    margin-bottom: 2rem !important;
 }
 
 /* sign starter */
@@ -128,16 +143,12 @@ a{
     opacity: .96; 
 }
 
-
+/* Intro Section */
 .section-intro__title {
   font-size: 0.75rem;
   color: #f9cc41;
   margin-bottom: 1rem;
   text-transform: uppercase;
-  line-height: 1.5em;
-  font-family: inherit;
-  font-weight: 500;
-  margin-top: 0;
 }
 .section-intro__title.left-border {
     padding-left: 35px;
@@ -154,14 +165,15 @@ a{
     transform: translateY(-50%);
     left: 0; 
 }
+
+/* Intro subtitle Section */
+
 .section-intro__subtitle {
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
     font-size: 2.625rem;
     color: #fff;
     margin-bottom: 1.5rem;
-    line-height: 1.5em; 
-    margin-top: 0;
 }
 .section-intro__subtitle.bottom-border {
     padding-bottom: 30px;
@@ -182,8 +194,75 @@ a{
     font-size: 2rem; 
 }
 
-
-
+/* resume link */
+.mt-4, .my-4{
+    margin-top: 1.5rem !important;
+}
+.btn {
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #fff;
+    padding: .5rem 1.6rem;
+    position: relative;
+    background: transparent; }
+.btn--rightBorder:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -1.25rem;
+    min-width: 1.25rem;
+    height: 2px;
+    background: #fff; }
+.btn--leftBorder:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -1.25rem;
+    min-width: 1.25rem;
+    height: 2px;
+    background: #fff; }
+.btn:hover {
+    background: #f9cc41;
+    border-color: #f9cc41;
+    color: #262533; }
+.btn:hover.btn--rightBorder:after {
+    background: #f9cc41; }
+.btn:hover.btn--leftBorder:before {
+    background: #f9cc41; }
+.btn.active {
+    background: #f9cc41;
+    border-color: #f9cc41;
+    color: #262533; }
+.btn.active.btn--rightBorder:after {
+    background: #f9cc41; }
+.btn.active.btn--leftBorder:before {
+    background: #f9cc41; }
+.btn-dark {
+    background: #262533;
+    border-color: #262533;
+    color: #f9cc41;
+    padding: .7rem 1.4rem; }
+.btn-dark.btn--rightBorder:after {
+    background: #262533; }
+.btn-dark.btn--leftBorder:before {
+    background: #262533; }
+.btn-dark:hover {
+    background: #262533;
+    color: #f9cc41;
+    border-color: #262533; }
+.btn-dark:hover.btn--rightBorder:after {
+    background: #262533; }
+.btn-dark:hover.btn--rightBorder:before {
+    background: #262533; }
+  
 
 
 /* desktop style*/
@@ -194,13 +273,13 @@ header
     top: 0;
     left: 0;
     padding:0 100px;
-    background-color: #262626;
+    background-color: #f9cc41;
     width: 100%;
     box-sizing: border-box;
 }
 header .logo
 {
-    color: #fff;
+    color: #262533;
     height: 50px;
     line-height: 50px;
     font-size: 24px;
@@ -230,11 +309,10 @@ header nav ul li a
     text-decoration:none;
     display: block;
 }
-header nav ul li a:hover,
-header nav ul li a.active
+header nav ul li a:hover
 {
-    color:#fff;
-    background-color: #2196f3;
+    color:#f9cc41;
+
 }
 .menu-toggle
 {
@@ -264,7 +342,8 @@ header nav ul li a.active
         position: fixed;
         width: 100%;
         height: calc(100vh - 50px);
-        background: #333;
+        background: #262533;
+        opacity: .95;
         top: 50px;
         left: -100%;
         transition: 1s;
@@ -275,12 +354,15 @@ header nav ul li a.active
     }
     header nav ul
     {
+        font-family: 'Oswald';
         display: block;
         text-align: center;
+        font-size: 25px;
+     
     }
     header nav ul li a
-    {
-        border-bottom: 1px solid rgba(0,0,0,.2);
+    {   
+        margin-top: 3rem;
     }
 }
 

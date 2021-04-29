@@ -1,0 +1,451 @@
+@define-mixin atSmall {
+    @media (min-width: 576px) {
+      @mixin-content; } }
+  @define-mixin atMedium {
+    @media (min-width: 768px) {
+      @mixin-content; } }
+  @define-mixin atLarge {
+    @media (min-width: 992px) {
+      @mixin-content; } }
+  @define-mixin atExtraLarge {
+    @media (min-width: 1200px) {
+      @mixin-content; } }
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+    color: #8f8f8f;
+    background: #262533;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+    line-height: 1.5em;
+    margin-top: 0;
+}
+
+.h1,.h2,.h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    font-family: inherit;
+    font-weight: 500;
+}
+.section{
+    display: block;
+}
+
+p{
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+*, ::after, ::before{
+    box-sizing: border-box;
+}
+
+.section-margin {
+    margin-top: 60px;
+    margin-bottom: 60px; 
+}
+@media (min-width: 992px) {
+    .section-margin {
+    margin-top: 115px;
+    margin-bottom: 115px; 
+    } 
+}
+
+/* profile starter */
+
+/* home page container */
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.align-items-center{
+    align-items: center !important;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-5, .col-md-7{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* pic starter */
+
+.about__img{
+    position: relative;
+}
+.text-center{
+    text-align: center !important;
+}
+.mb-5{
+    margin-bottom: 2rem !important;
+}
+
+/* sign starter */
+
+.about__img {
+    position: relative; 
+}
+.about__img__date{
+    display: inline-block;
+    position: absolute;
+    bottom: 11%;
+    left: 13%;
+    background: #f9cc41;
+    color: #000000;
+    padding: .9rem 1.2rem 1rem 1.2rem;
+    transition: .4s;
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+.img{
+    vertical-align: middle;
+    border-style: none;
+}
+
+.about__img__date h3{
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: .2rem;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+}
+.about__img__date p{
+    margin-bottom: 0;
+    font-style: 0.75rem;
+}
+.about__img__date:hover {
+    color: #000000;
+    opacity: .96; 
+}
+
+/* Intro Section */
+.section-intro__title {
+  font-size: 0.75rem;
+  color: #f9cc41;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.section-intro__title.left-border {
+    padding-left: 35px;
+    position: relative; 
+}
+.section-intro__title.left-border:after {
+    content: "";
+    display: block;
+    min-width: 20px;
+    height: 2px;
+    background: #f9cc41;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0; 
+}
+
+/* Intro subtitle Section */
+
+.section-intro__subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 2.625rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+.section-intro__subtitle.bottom-border {
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+    position: relative; 
+}
+.section-intro__subtitle.bottom-border:after {
+    content: "";
+    display: block;
+    height: 2px;
+    min-width: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #f9cc41; 
+}
+.section-intro__subtitle.small {
+    font-size: 2rem; 
+}
+
+/* resume link */
+.mt-4, .my-4{
+    margin-top: 1.5rem !important;
+}
+.btn {
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #fff;
+    padding: .5rem 1.6rem;
+    position: relative;
+    background: transparent; }
+.btn--rightBorder:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -1.25rem;
+    min-width: 1.25rem;
+    height: 2px;
+    background: #fff; }
+.btn--leftBorder:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -1.25rem;
+    min-width: 1.25rem;
+    height: 2px;
+    background: #fff; }
+.btn:hover {
+    background: #f9cc41;
+    border-color: #f9cc41;
+    color: #262533; }
+.btn:hover.btn--rightBorder:after {
+    background: #f9cc41; }
+.btn:hover.btn--leftBorder:before {
+    background: #f9cc41; }
+.btn.active {
+    background: #f9cc41;
+    border-color: #f9cc41;
+    color: #262533; }
+.btn.active.btn--rightBorder:after {
+    background: #f9cc41; }
+.btn.active.btn--leftBorder:before {
+    background: #f9cc41; }
+.btn-dark {
+    background: #262533;
+    border-color: #262533;
+    color: #f9cc41;
+    padding: .7rem 1.4rem; }
+.btn-dark.btn--rightBorder:after {
+    background: #262533; }
+.btn-dark.btn--leftBorder:before {
+    background: #262533; }
+.btn-dark:hover {
+    background: #262533;
+    color: #f9cc41;
+    border-color: #262533; }
+.btn-dark:hover.btn--rightBorder:after {
+    background: #262533; }
+.btn-dark:hover.btn--rightBorder:before {
+    background: #262533; }
+  
+
+
+/* desktop style*/
+header
+{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    padding:0 100px;
+    background-color: #f9cc41;
+    width: 100%;
+    box-sizing: border-box;
+}
+header .logo
+{
+    color: #262533;
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    float: right;
+    font-weight: bold;
+}
+header nav
+{
+    float: left;
+}
+header nav ul
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+header nav ul li
+{
+    list-style: none;
+}
+header nav ul li a
+{
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: #fff;
+    text-decoration:none;
+    display: block;
+}
+header nav ul li a:hover
+{
+    color:#f9cc41;
+
+}
+.menu-toggle
+{
+    color: #fff;
+    float: left;
+    position: relative;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+/* mobile style*/
+@media (max-width: 1120px)
+{
+    header
+    {
+        padding:0 20px;
+    }
+   
+    .menu-toggle
+    {
+        display: block;
+    }
+    header nav
+    {
+        position: fixed;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #262533;
+        opacity: .95;
+        top: 50px;
+        left: -100%;
+        transition: 1s;
+    }
+    header nav.active
+    {
+        left: 0;
+    }
+    header nav ul
+    {
+        font-family: 'Oswald';
+        display: block;
+        text-align: center;
+        font-size: 25px;
+     
+    }
+    header nav ul li a
+    {   
+        margin-top: 3rem;
+    }
+}
+
+/* body style */
+.profile{
+    align-items: center !important;
+}
+.profilePic{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.profileBio{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.profileBio p{
+    font-family: 'Roboto', sans-serif;
+    text-indent: 40px;
+    color: #8f8f8f;
+   
+}
+.profileBio-Intro_Subtitle{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 2.625rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    line-height: 1.5rem;
+    margin-top: 0;
+    box-sizing: border-box;
+    text-align: left;
+}
+.profileBio-Intro_Title{
+    
+    font-size:0.75rem;
+    color: #f9cc41;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 1.5em;
+    box-sizing: border-box;
+    margin-top: 0;
+    font-family: inherit;
+ 
+}
+footer{
+    text-align: center;
+    height: 33px;
+    background: rgba(0,0,0,0.75);
+    margin: 0;
+    padding: 0;
+}
+footer li{
+    display: inline-block;
+    margin-right: 40px;
+}
+footer .gitlogo a{
+    background-image: url("/Images/logos/GithubWorkWhite.png");
+    background-size: 90px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-indent: -9999px;
+    background-position-y: 5px;
+    background-position-x: -6.5px;
+    height: 33px;
+    width: 75px;
+}
+
+footer .linklogo a{
+    background-image: url("/Images/logos/LinkedinWhite.png");
+    background-size: 90px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-indent: -9999px;
+    background-position-x: -6.6px;
+    background-position-y: 5px;
+    height: 33px;
+    width: 75px;
+}
