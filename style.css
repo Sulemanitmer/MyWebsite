@@ -53,6 +53,9 @@ p{
     margin-top: 60px;
     margin-bottom: 60px; 
 }
+.section-margin2 {
+    margin-top: 50px;
+}
 @media (min-width: 992px) {
     .section-margin {
     margin-top: 115px;
@@ -82,7 +85,7 @@ p{
     margin-left: -15px;
 }
 
-.col-md-5, .col-md-7{
+.col-md-5, .col-md-7, .col-md-4{
     position: relative;
     width: 100%;
     min-height: 1px;
@@ -90,6 +93,9 @@ p{
     padding-left: 15px;
 }
 
+.col-md-4{
+    margin-top: 85px;
+}
 /* pic starter */
 
 .about__img{
@@ -198,6 +204,7 @@ p{
 .mt-4, .my-4{
     margin-top: 1.5rem !important;
 }
+
 .btn {
     display: inline-block;
     border: 2px solid #fff;
@@ -209,6 +216,7 @@ p{
     padding: .5rem 1.6rem;
     position: relative;
     background: transparent; }
+
 .btn--rightBorder:after {
     content: "";
     display: block;
@@ -219,6 +227,7 @@ p{
     min-width: 1.25rem;
     height: 2px;
     background: #fff; }
+
 .btn--leftBorder:before {
     content: "";
     display: block;
@@ -426,6 +435,120 @@ footer li{
     display: inline-block;
     margin-right: 40px;
 }
+
+
+
+.tips-bg {
+  background: #f9cc41;
+  text-align: center;
+  padding: 90px 0; }
+.tips-bg .section-intro__subtitle {
+    margin-bottom: 20px;
+    color: #262533; 
+}
+.tips .btn:hover {
+  background: transparent;
+  color: #262533; }
+
+
+.media{
+    display: flex;
+    align-items: flex-start;
+}
+.contact-info__icon {
+    margin-right: 20px; }
+.contact-info__icon i,
+.contact-info__icon span {
+      font-size: 20px;
+      color: #f9cc41; }
+.contact-info h3 {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #fff; }
+.contact-info h3 a 
+{
+      color: #fff; 
+}
+
+
+.form-contact .form-group {
+    margin-bottom: 10px; }
+  .form-contact .form-control {
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 0;
+    height: 40px;
+    padding-left: 18px;
+    font-size: 13px;
+    color: #8f8f8f; }
+  .form-contact .different-control {
+    min-height: 140px; }
+
+.hero-banner {
+    padding: 120px 0 50px 0; }
+    @media (min-width: 992px) {
+      .hero-banner {
+         padding: 125px 0 100px 0; } }
+     @media (min-width: 1200px) {
+        .hero-banner {
+         padding: 165px 0; } }
+    .hero-banner.project-bg {
+        background: url("Images/project-bg.png") left center no-repeat;
+        background-size: cover; }
+.breadcrumb {
+  padding: 0;
+  background: transparent;
+  display:flex ;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  list-style: none;
+  border-radius: .25rem;
+}
+  .breadcrumb span {
+    cursor: initial !important; }
+  .breadcrumb .btn {
+    background: #f9cc41;
+    border-color: #f9cc41;
+    color: #000000; }
+    .breadcrumb .btn.btn--rightBorder:after {
+      background: #f9cc41;
+      right: -1.5rem; }
+    .breadcrumb .btn:after {
+      content: "|";
+      margin: 0 5px 0 9px; }
+    .breadcrumb .btn:last-child:after {
+      content: ""; }
+    .breadcrumb .btn:first-child {
+      padding-right: 0; }
+    .breadcrumb .btn:not(:first-child) {
+      padding-left: 0; }
+        
+.section-intro__subtitle {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 2.625rem;
+  color: #fff;
+  margin-bottom: 1.5rem; }
+  .section-intro__subtitle.bottom-border {
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+    position: relative; }
+    .section-intro__subtitle.bottom-border:after {
+      content: "";
+      display: block;
+      height: 2px;
+      min-width: 100px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: #f9cc41; }
+  .section-intro__subtitle.small {
+    font-size: 2rem; }
+
+
+.down{
+    margin-top: 70px;
+}
 footer .gitlogo a{
     background-image: url("/Images/logos/GithubWorkWhite.png");
     background-size: 90px;
@@ -433,9 +556,9 @@ footer .gitlogo a{
     display: inline-block;
     text-indent: -9999px;
     background-position-y: 5px;
-    background-position-x: -6.5px;
+    background-position-x: 30px;
     height: 33px;
-    width: 75px;
+    width: 150px;
 }
 
 footer .linklogo a{
@@ -444,8 +567,8 @@ footer .linklogo a{
     background-repeat: no-repeat;
     display: inline-block;
     text-indent: -9999px;
-    background-position-x: -6.6px;
+    background-position-x: 30px;
     background-position-y: 5px;
     height: 33px;
-    width: 75px;
+    width: 150px;
 }
