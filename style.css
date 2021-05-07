@@ -1,16 +1,3 @@
-@define-mixin atSmall {
-    @media (min-width: 576px) {
-      @mixin-content; } }
-  @define-mixin atMedium {
-    @media (min-width: 768px) {
-      @mixin-content; } }
-  @define-mixin atLarge {
-    @media (min-width: 992px) {
-      @mixin-content; } }
-  @define-mixin atExtraLarge {
-    @media (min-width: 1200px) {
-      @mixin-content; } }
-
 body
 {
     font-family: 'Roboto', sans-serif;
@@ -56,12 +43,7 @@ p{
 .section-margin2 {
     margin-top: 50px;
 }
-@media (min-width: 992px) {
-    .section-margin {
-    margin-top: 115px;
-    margin-bottom: 115px; 
-    } 
-}
+
 
 /* profile starter */
 
@@ -85,7 +67,7 @@ p{
     margin-left: -15px;
 }
 
-.col-md-5, .col-md-7, .col-md-4{
+.col-md-5, .col-md-7, .col-md-4, .col-lg-5{
     position: relative;
     width: 100%;
     min-height: 1px;
@@ -334,47 +316,6 @@ header nav ul li a:hover
     display: none;
 }
 
-/* mobile style*/
-@media (max-width: 1120px)
-{
-    header
-    {
-        padding:0 20px;
-    }
-   
-    .menu-toggle
-    {
-        display: block;
-    }
-    header nav
-    {
-        position: fixed;
-        width: 100%;
-        height: calc(100vh - 50px);
-        background: #262533;
-        opacity: .95;
-        top: 50px;
-        left: -100%;
-        transition: 1s;
-    }
-    header nav.active
-    {
-        left: 0;
-    }
-    header nav ul
-    {
-        font-family: 'Oswald';
-        display: block;
-        text-align: center;
-        font-size: 25px;
-     
-    }
-    header nav ul li a
-    {   
-        margin-top: 3rem;
-    }
-}
-
 /* body style */
 .profile{
     align-items: center !important;
@@ -441,7 +382,8 @@ footer li{
 .tips-bg {
   background: #f9cc41;
   text-align: center;
-  padding: 90px 0; }
+  padding: 90px 0; 
+  margin-bottom: 50px}
 .tips-bg .section-intro__subtitle {
     margin-bottom: 20px;
     color: #262533; 
@@ -450,7 +392,31 @@ footer li{
   background: transparent;
   color: #262533; }
 
+.resume-bg {
+  background: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 45px;
+ }
 
+ .btn-white {
+    background: #262533;
+    border-color: #262533;
+    color: white;
+    padding: .7rem 1.4rem; }
+.btn-white.btn--rightBorder:after {
+    background: #262533; }
+.btn-white.btn--leftBorder:before {
+    background: #262533; }
+.btn-white:hover {
+    background: #262533;
+    color: white;
+    border-color: #262533; }
+.btn-white:hover.btn--rightBorder:after {
+    background: #262533; }
+.btn-white:hover.btn--rightBorder:before {
+    background: #262533; }
+    
 .media{
     display: flex;
     align-items: flex-start;
@@ -486,15 +452,11 @@ footer li{
 
 .hero-banner {
     padding: 120px 0 50px 0; }
-    @media (min-width: 992px) {
-      .hero-banner {
-         padding: 125px 0 100px 0; } }
-     @media (min-width: 1200px) {
-        .hero-banner {
-         padding: 165px 0; } }
-    .hero-banner.project-bg {
-        background: url("Images/project-bg.png") left center no-repeat;
-        background-size: cover; }
+  
+.hero-banner.project-bg {
+    background: url("Images/project-bg.png") left center no-repeat;
+    background-size: cover; }
+
 .breadcrumb {
   padding: 0;
   background: transparent;
@@ -549,6 +511,8 @@ footer li{
 .down{
     margin-top: 70px;
 }
+
+
 footer .gitlogo a{
     background-image: url("/Images/logos/GithubWorkWhite.png");
     background-size: 90px;
@@ -571,4 +535,142 @@ footer .linklogo a{
     background-position-y: 5px;
     height: 33px;
     width: 150px;
+}
+   
+@media (min-width: 576px){
+    .container{
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+    .col-md-7, .col-lg-7{
+        flex: 0 0 58.3333%;
+        max-width: 58.333%;
+    }
+    .col-md-5, .col-lg-5{
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+
+    .order-md-1{
+        order: 1;
+    }
+    .order-md-2{
+        order: 2;
+    }
+    .text-md-left{
+        text-align: left !important;
+
+    }
+
+    .text-lg-right{
+        text-align: right !important;
+    }
+    .mb-md-0, .mb-lg-0{
+        margin-bottom: 0 !important;
+    }
+
+    .pd-md-5, .py-md-5{
+        padding-bottom: 3rem !important;
+    }
+
+    footer .gitlogo a{
+
+        background-position-x: 0px;
+        width: 200px;
+    }
+    
+    footer .linklogo a{
+ 
+        background-position-x: 110px;
+        width: 200px;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+    .section-margin {
+        margin-top: 115px;
+        margin-bottom: 115px; 
+    }
+    .hero-banner {
+       padding: 125px 0 100px 0; 
+    } 
+}
+@media (min-width: 1200px){
+    .container{
+        max-width: 1140px;
+    }
+    .hero-banner {
+        padding: 165px 0; 
+    }
+
+    footer .gitlogo a{
+
+        background-position-x: 0px;
+        width: 300px;
+    }
+    
+    footer .linklogo a{
+ 
+        background-position-x: 210px;
+        width: 300px;
+    }
+}
+@media (min-width: 1121px)
+{
+    header nav ul li a{
+        color: #262533;
+        
+        height: 50px;
+        line-height: 50px;
+        font-size: 16.5px;
+
+    }
+}
+
+/* mobile style*/
+@media (max-width: 1120px)
+{
+    header
+    {
+        padding:0 20px;
+    }
+   
+    .menu-toggle
+    {
+        display: block;
+    }
+    header nav
+    {
+        position: fixed;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #262533;
+        opacity: .95;
+        top: 50px;
+        left: -100%;
+        transition: 1s;
+    }
+    header nav.active
+    {
+        left: 0;
+    }
+    header nav ul
+    {
+        font-family: 'Oswald';
+        display: block;
+        text-align: center;
+        font-size: 25px;
+     
+    }
+    header nav ul li a
+    {   
+        margin-top: 3rem;
+        color: white;
+    }
 }
