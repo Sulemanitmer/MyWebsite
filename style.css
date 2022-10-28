@@ -15,6 +15,10 @@ a{
     text-decoration: none;
 }
 
+mark.imp {
+    color:#f9cc41;
+    background: none;
+}
 h1, h2, h3, h4, h5, h6{
     line-height: 1.5em;
     margin-top: 0;
@@ -186,7 +190,9 @@ p{
 .mt-4, .my-4{
     margin-top: 1.5rem !important;
 }
-
+.disabled {
+    pointer-events: none;
+}
 .btn {
     display: inline-block;
     border: 2px solid #fff;
@@ -198,6 +204,17 @@ p{
     padding: .5rem 1.6rem;
     position: relative;
     background: transparent; }
+
+.btn--right {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -1.25rem;
+    min-width: 1.25rem;
+    height: 2px;
+    background: #fff; }
 
 .btn--rightBorder:after {
     content: "";
@@ -393,7 +410,7 @@ footer li{
   color: #262533; }
 
 .resume-bg {
-  background: white;
+  background: #f9cc41;
   text-align: center;
   padding: 20px 0;
   margin-bottom: 45px;
@@ -520,9 +537,9 @@ footer .gitlogo a{
     display: inline-block;
     text-indent: -9999px;
     background-position-y: 5px;
-    background-position-x: 30px;
+    background-position-x: -5px;
     height: 33px;
-    width: 150px;
+    width: 80px;
 }
 
 footer .linklogo a{
@@ -531,15 +548,26 @@ footer .linklogo a{
     background-repeat: no-repeat;
     display: inline-block;
     text-indent: -9999px;
-    background-position-x: 30px;
+    background-position-x: -5px;
     background-position-y: 5px;
     height: 33px;
-    width: 150px;
+    width: 80px;
 }
    
 @media (min-width: 576px){
     .container{
         max-width: 540px;
+    }
+    footer .gitlogo a{
+
+        background-position-x: 30px;
+        width: 150px;
+    }
+    
+    footer .linklogo a{
+ 
+        background-position-x: 30px;
+        width: 150px;
     }
 }
 @media (min-width: 768px){
